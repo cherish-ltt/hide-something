@@ -240,14 +240,20 @@ mod tests {
     fn test_error_carrier_empty() {
         // Template with no alphabetic characters should fail.
         let result = hide_encrypt("test", "123!@#");
-        assert!(matches!(result, Err(error::HideSomethingError::CarrierTemplateEmpty)));
+        assert!(matches!(
+            result,
+            Err(error::HideSomethingError::CarrierTemplateEmpty)
+        ));
     }
 
     #[test]
     fn test_error_too_short_data() {
         // A hidden text with fewer than 4 alphabetic chars cannot hold the length.
         let result = hide_decrypt("abc");
-        assert!(matches!(result, Err(error::HideSomethingError::TooShortData)));
+        assert!(matches!(
+            result,
+            Err(error::HideSomethingError::TooShortData)
+        ));
     }
 
     // Note: The following test is disabled because it depends on the exact

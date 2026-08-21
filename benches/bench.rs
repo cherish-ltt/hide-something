@@ -1,4 +1,4 @@
-use criterion::{criterion_group, criterion_main, Criterion, Throughput};
+use criterion::{Criterion, Throughput, criterion_group, criterion_main};
 use hide_something::{hide_decrypt, hide_encrypt};
 
 /// A fixed carrier template for all benchmarks.
@@ -68,10 +68,5 @@ fn bench_roundtrip(c: &mut Criterion) {
     group.finish();
 }
 
-criterion_group!(
-    benches,
-    bench_encrypt,
-    bench_decrypt,
-    bench_roundtrip
-);
+criterion_group!(benches, bench_encrypt, bench_decrypt, bench_roundtrip);
 criterion_main!(benches);
