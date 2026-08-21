@@ -1,5 +1,6 @@
 # hide‑something
 
+[![GitHub Actions](https://img.shields.io/github/actions/workflow/status/cherish-ltt/hide-something/rust-ci.yml?branch=main)](https://github.com/cherish-ltt/hide-something/actions/workflows/rust-ci.yml)
 [![Crates.io](https://img.shields.io/crates/v/hide-something.svg)](https://crates.io/crates/hide-something)
 [![Docs.rs](https://docs.rs/hide-something/badge.svg)](https://docs.rs/hide-something)
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
